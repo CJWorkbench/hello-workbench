@@ -1,0 +1,20 @@
+{
+ "name": "Hello Workbench",
+ "id_name": "hello-workbench",
+ "category" : "Analyze",
+ "description" : "Multiply a column by a constant",
+ "help_url": "https://github.com/cjworkbench/hello-workbench",
+ "parameters": [
+        {
+         "name": "Column to multiply",
+         "id_name": "colname",
+         "type": "column"
+        },
+        {
+        "name": "Multiply by",
+        "id_name": "factor",
+        "type": "float",
+        "default": "2"
+        }
+    ]
+}
