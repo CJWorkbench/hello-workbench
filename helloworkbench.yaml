@@ -1,0 +1,13 @@
+id_name: helloworkbench
+name: Hello Workbench
+category: Analyze
+description: Multiply a column by a constant.
+help_url: modules/analyze/hello-workbench
+parameters:
+- id_name: colname
+  type: column
+  name: Column to multiply
+- id_name: factor
+  name: Multiply by
+  type: float
+  default: 2.0
