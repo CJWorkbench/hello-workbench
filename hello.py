@@ -1,4 +1,5 @@
 from pandas.api.types import is_numeric_dtype
+import math
 
 def render(table, params):
     colname = params['colname']
@@ -9,6 +10,9 @@ def render(table, params):
     if colname is '':
         return table
     
+    # raise exception on this line
+    math.log10(0)
+
     # If the column is not a number, return an error message
     # see https://github.com/CJWorkbench/cjworkbench/wiki/Column-Types
     if not is_numeric_dtype(table[colname]):
