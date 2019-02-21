@@ -14,7 +14,7 @@
         "name": "Multiply by",
         "id_name": "factor",
         "type": "float",
-        "default": "2"
+        "default": 2
         }
     ]
 }
