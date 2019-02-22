@@ -1,7 +1,7 @@
 from pandas.api.types import is_numeric_dtype
 
 
-def render(table, params, columns):
+def render(table, params, *, input_columns):
     colname = params['colname']
     factor  = params['factor']
 

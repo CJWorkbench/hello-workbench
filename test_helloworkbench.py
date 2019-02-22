@@ -21,7 +21,7 @@ def P(*, colname: str = '', factor: float = 2.0):
 
 class HelloWorkbenchTest(unittest.TestCase):
     def test_no_column_no_op(self):
-        result = render(pd.DataFrame({'A': [1, 2]}), P(), columns={})
+        result = render(pd.DataFrame({'A': [1, 2]}), P(), input_columns={})
         expected = pd.DataFrame({'A': [1, 2]})
         assert_frame_equal(result, expected)
 
@@ -30,13 +30,13 @@ class HelloWorkbenchTest(unittest.TestCase):
         # this case.
         result = render(pd.DataFrame({'A': [1, 2]}),
                         P(colname='A', factor=3.0),
-                        columns={'A': Column('A', 'text')})
+                        input_columns={'A': Column('A', 'text')})
         self.assertEqual(result, 'Please select a Number column')
 
     def test_happy_path(self):
         result = render(pd.DataFrame({'A': [1, 2]}),
                         P(colname='A', factor=3.0),
-                        columns={'A': Column('A', 'number')})
+                        input_columns={'A': Column('A', 'number')})
         expected = pd.DataFrame({'A': [3.0, 6.0]})
         assert_frame_equal(result, expected)
 
